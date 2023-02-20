@@ -2,7 +2,6 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\UploadFileController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,10 +17,3 @@ use App\Http\Controllers\UploadFileController;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
-
-
-Route::post('upload',[UploadFileController::class,'store']);
-
-Route::get('list',[UploadFileController::class,'index']);
-
-Route::get('delete/{id}',[UploadFileController::class,'destroy']);
